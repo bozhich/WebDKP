@@ -1,0 +1,18 @@
+Introduction
+WebDKP is a web based DKP (Dragon Kill Points) system for World of Warcraft. The web based interface works with an in-game addon that allows players to manage their DKP directly while playing. Changes can then be synced with the site by uploading a log file.
+
+This is the personal version of the publicly hosted WebDKP available at WebDKP.com. It provides the same features, but allows you to host your your DKP on your own server.
+
+What is DKP?
+DKP, short for “Dragon Kills Points”, is a method of rewarding items to players in game based on their contribution. In general, users receive ‘DKP Points’ whenever they participate in raid or help the guild. They can then ‘spend’ these points when items drop during raids to purchase them. In this way, players who consistently help the guild can fairly earn items.
+
+Features
+The system has many features including:
+
+# Complete access to your DKP in game # One Click uploading to the site # Zerosum DKP Support # Lifetime DKP # Loot Tables # Integration with The Armory # Officer Accounts with Specialized Permissions # Multiple DKP Tables # Rich table editing tools to update your table # Backups # Bidding Support
+
+This version of WebDKP is intended for individual guilds to host on their own server.
+
+Requirements: - MySQL - PHP 5+
+
+More information can be found at WebDKP.com

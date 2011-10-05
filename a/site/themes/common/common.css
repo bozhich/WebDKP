@@ -1,0 +1,57 @@
+/*=============================================
+Common.css
+Contains common settings that apply acorss themes.
+These are used for those layouts that are commonly
+available regardless of what theme is selected
+as well as some standard / default settings
+for the site notices
+==============================================*/
+
+/*==================================
+Notice Boxes
+Defines some styles for notice boxes.
+May be overridden by extending themes.
+==================================*/
+.noticeMessage {
+	border:1px solid #C4E2FD;
+	padding: 4px;
+	padding-left: 25px;
+	margin: 4px 0px 4px 0px;
+	background: #E5F2FF url(<?=$directory?>/images/info.png) no-repeat 4px 9px;
+	}
+
+.errorMessage {
+	border:1px solid #FAD163;
+	background-color: #FAE5AD;
+	padding: 4px;
+	padding-left: 25px;
+	margin: 4px 0px 4px 0px;
+	background: #FAE5AD url(<?=$directory?>/images/error.png) no-repeat 4px 9px;
+	}
+.message {
+	padding: 4px;
+	padding-left: 25px;
+	margin: 4px 0px 4px 0px;
+	background-color: #BFFFBA;
+	border: 1px solid #81DC7B;
+	background: #BFFFBA url(<?=$directory?>/images/accept.png) no-repeat 4px 9px;
+	}
+
+/*==================================
+Others
+==================================*/
+.mediumButton {
+	font-size: 130%;
+	/*padding: 2px;*/
+	}
+
+.formInput {
+	font-size: 130%;
+	padding: 2px;
+	}
+
+.formLabel {
+	font-weight: bold;
+	font-size: 130%;
+	color: #7D7D7D;
+	}
