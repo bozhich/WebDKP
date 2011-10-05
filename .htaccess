@@ -1,0 +1,15 @@
+# Don't show directory listings for URLs which map to a directory.
+#Options -Indexes
+
+<IfModule mod_security.c>
+   SecFilterEngine Off
+   SecFilterScanPOST Off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule 		^$ 			site/webroot/    		[L]
+   RewriteRule 		(.*) 		site/webroot/$1 		[QSA,L]
+</IfModule>
+
+#AddHandler application/x-httpd-php5 .php

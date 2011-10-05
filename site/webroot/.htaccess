@@ -1,0 +1,65 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+	RewriteRule ^Player/([^/]*)/([0-9]*)$				index.php?url=Player&player=$1&player_page=$2									[QSA,L,NC]
+	RewriteRule ^Player/([^/]*)/([0-9]*)/(.*)/(.*)$		index.php?url=Player&player=$1&player_page=$2&player_sort=$3&player_order=$4	[QSA,L,NC]
+	RewriteRule ^Player/([^/]*)/([0-9]*)/(.*)$			index.php?url=Player&player=$1&player_page=$2&player_sort=$3					[QSA,L,NC]
+	RewriteRule ^Player/([^/]*)$						index.php?url=Player&player=$1													[QSA,L,NC]
+
+	RewriteRule ^Admin/Manage/([0-9]*)$					index.php?url=Admin/Manage&manage_page=$1										[QSA,L,NC]
+	RewriteRule ^Admin/Manage/([0-9]*)/(.*)/(.*)$		index.php?url=Admin/Manage&manage_page=$1&manage_sort=$2&manage_order=$3		[QSA,L,NC]
+	RewriteRule ^Admin/Manage/([0-9]*)/(.*)$			index.php?url=Admin/Manage&manage_page=$1&manage_sort=$2						[QSA,L,NC]
+
+	RewriteRule ^Admin/EditAward/([0-9]*)$				index.php?url=Admin/EditAward&id=$1					[QSA,L,NC]
+	RewriteRule ^Admin/EditLootTable/([0-9]*)$			index.php?url=Admin/EditLootTable&table=$1			[QSA,L]
+
+	RewriteRule ^Award/([0-9]*)$				index.php?url=Award&id=$1									[QSA,L,NC]
+	RewriteRule ^Awards/([0-9]*)$				index.php?url=Awards&all_page=$1							[QSA,L,NC]
+	RewriteRule ^Awards/([0-9]*)/(.*)/(.*)$		index.php?url=Awards&all_page=$1&all_sort=$2&all_order=$3	[QSA,L,NC]
+	RewriteRule ^Awards/([0-9]*)/(.*)$			index.php?url=Awards&all_page=$1&all_sort=$2				[QSA,L,NC]
+
+	RewriteRule ^Tiers/([0-9]*)$				index.php?url=Tiers&tiers_page=$1							[QSA,L,NC]
+	RewriteRule ^Tiers/([0-9]*)/(.*)/(.*)$		index.php?url=Tiers&tiers_page=$1&tiers_sort=$2&tiers_order=$3	[QSA,L,NC]
+	RewriteRule ^Tiers/([0-9]*)/(.*)$			index.php?url=Tiers&tiers_page=$1&tiers_sort=$2				[QSA,L,NC]
+
+	RewriteRule ^Loot/([0-9]*)$					index.php?url=Loot&loot_page=$1								[QSA,L,NC]
+	RewriteRule ^Loot/([0-9]*)/(.*)/(.*)$		index.php?url=Loot&loot_page=$1&loot_sort=$4&loot_order=$5	[QSA,L,NC]
+	RewriteRule ^Loot/([0-9]*)/(.*)$			index.php?url=Loot&loot_page=$1&loot_sort=$4				[QSA,L,NC]
+
+	RewriteRule ^Dkp/([0-9]*)$					index.php?url=Dkp&main_page=$1								[QSA,L,NC]
+	RewriteRule ^Dkp/([0-9]*)/(.*)/(.*)$		index.php?url=Dkp&main_page=$1&main_sort=$2&main_order=$3	[QSA,L,NC]
+	RewriteRule ^Dkp/([0-9]*)/(.*)$				index.php?url=Dkp&main_page=$1&main_sort=$2					[QSA,L,NC]
+
+	#Rewrite rules for the control panel
+	RewriteRule ^edit/newpage/([0-9]*)$						edit/newpage?view=create$1										[QSA,L,NC]
+	RewriteRule ^edit/([0-9]*)$								edit/pagesettings?pageid=$1										[QSA,L,NC]
+	RewriteRule ^admin/templates$							admin/webpages?view=templates									[QSA,L,NC]
+	RewriteRule ^admin/templates/([0-9]*)$					admin/webpages?view=template&templateid=$1						[QSA,L,NC]
+	RewriteRule ^admin/permissions(.*)$ 					admin/security?view=permissions									[QSA,L,NC]
+	RewriteRule ^admin/usergroups/group/([0-9]*)$			admin/security?view=usergroup&groupid=$1						[QSA,L,NC]
+	RewriteRule ^admin/usergroups(.*)$ 						admin/security?view=groups										[QSA,L,NC]
+	RewriteRule ^admin/users/user/([0-9]*)$					admin/security?view=user&userid=$1								[QSA,L,NC]
+	RewriteRule ^admin/users/([0-9]*)$						admin/security?users_page=$1 									[QSA,L,NC]
+	RewriteRule ^admin/users/([0-9]*)/(.*)/(.*)$ 			admin/security?users_page=$1&users_sort=$2&users_sorttype=$3 	[QSA,L,NC]
+	RewriteRule ^admin/users(.*)$ 							admin/security 													[QSA,L,NC]
+
+	#Rules for media
+	RewriteRule ^media/(.*)$ ../media/$1 [QSA,L]
+
+	#Rules for themes
+	RewriteRule ^themes/(.*)$ ../themes/$1 [QSA,L]
+
+	#Rewrite rule for plugins
+	RewriteRule ^plugins/(.*)$ ../plugins/$1 [QSA,L]
+
+	#Rewrite rule for part resource files
+	RewriteRule ^parts/(.*)bin/(images|css|js|files)(.*)$ ../parts/$1bin/$2$3 [QSA,L]
+
+	#Rewrite rule for control resource files
+	RewriteRule ^(.*)bin/(images|css|js|files)(.*)$ ../control/$1bin/$2$3 [QSA,L]
+
+	#If a file doesn't exist - forward it to the main system
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
