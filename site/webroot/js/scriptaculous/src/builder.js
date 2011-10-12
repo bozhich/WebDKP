@@ -74,6 +74,15 @@ var Builder = {
     if(arguments[2])
       this._children(element, arguments[2]);
 
+    if(arguments[3])
+      this._children(element, arguments[3]);
+
+    if(arguments[4])
+      this._children(element, arguments[4]);
+     return element;
+
+    if(arguments[5])
+      this._children(element, arguments[5]);
      return element;
   },
   _text: function(text) {

@@ -149,7 +149,7 @@ DKP = new (function() {
 	this.SetupSimpleTables = function() {
 		var tables = $$('table.simpletable');
 		for ( var i = 0 ; i < tables.size() ; i++ ) {
-			table = new DKPTable(tables[i].id);
+		 	table = new DKPTable(tables[i].id);
 			table.DrawSimple();
 		}
 	}
@@ -976,28 +976,28 @@ var PointsTable = Class.create(ManualPageTable, {
 		var row = Builder.node('tr');
 
 		//var link = ;
-
-		var img = Builder.node('img',{src:Site.SiteRoot+"images/classes/small/"+this.items[i].playerclass+".gif"});
+    var img = Builder.node('img',{src:Site.SiteRoot+"images/classes/small/"+this.items[i].playerclass+".gif"});
     var armory = Builder.node('a',{href:"http://armory.molten-wow.com/character-profile/"+this.items[i].player+"/Neltharion/"},img);
+    row.appendChild(Builder.node('td',{className:"center",sortkey:this.items[i].playerclass},armory));
+//    row.appendChild(Builder.node('td',{},Builder.node('a',{href:DKP.BaseUrl+"Player/"+this.items[i].player,class:'player_link'},this.items[i].player)));
+    //build the row
+    row.appendChild(Builder.node('td',{},
+                      //build the normal DKP liml
+                      Builder.node('a',{href:DKP.BaseUrl+"Player/"+this.items[i].player,class:'dkp_link'},this.items[i].player),
+                      //build a <p> so the next values will be on a new row
+                      Builder.node('p',{},
+                        Builder.node('a',{href:"http://armory.molten-wow.com/character-profile/"+this.items[i].player+"/Neltharion/",class:'armory_link'},'Armory'),
+                        Builder.node('a',{href:"http://wiki.molten-wow.com/wiki/"+this.items[i].player,class:'wiki_link'},'Wiki')
+                      )
+                    )
+                  );
 
-		row.appendChild(Builder.node('td',{className:"center",sortkey:this.items[i].playerclass},armory));
 
-		row.appendChild(Builder.node('td',{},
-
-
-
-      Builder.node('a',{href:DKP.BaseUrl+"Player/"+this.items[i].player},this.items[i].player))
-    );
-
-
-     row.appendChild(Builder.node('td',{className:"center"},this.items[i].playerrank+"")); 
-
+    //row.appendChild(Builder.node('td',{className:"center"},this.items[i].playerrank+""));
     row.appendChild(Builder.node('td',{},
       Builder.node('a',{href:"http://armory.molten-wow.com/guild/"+this.items[i].playerguild+"/Neltharion/"},this.items[i].playerguild))
     );
-
-
-		row.appendChild(Builder.node('td',{className:"center"},this.items[i].dkp+""));
+    row.appendChild(Builder.node('td',{className:"center"},this.items[i].dkp+""));
 
 		if (this.showLifetime) {
 			row.appendChild(Builder.node('td',{className:"center"},this.items[i].lifetime));
@@ -1006,11 +1006,9 @@ var PointsTable = Class.create(ManualPageTable, {
 			row.appendChild(Builder.node('td',{className:"center"},this.items[i].tier));
 		}
 
-
-
-
-		Event.observe(row,'mouseover', this.OnRowOver);
+    Event.observe(row,'mouseover', this.OnRowOver);
 		Event.observe(row,'mouseout', this.OnRowOut);
+
 
 		return row;
 	}

@@ -148,7 +148,7 @@ class util{
 		$message = "<div class='tooltip'>".$message."</div>";
 		$message = str_replace(array("\n", "\r"), '', $message);
 		$message = addslashes($message);
-		$message = 'onmouseover="return overlib(' . "'" . $message . "'" . ',FULLHTML);" onmouseout="return nd();"';
+		//$message = 'onmouseover="return overlib(' . "'" . $message . "'" . ',FULLHTML);" onmouseout="return nd();"';
 		return $message;
 	}
 

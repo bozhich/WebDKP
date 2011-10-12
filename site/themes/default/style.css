@@ -444,8 +444,8 @@ table.dkp tr .middle img{
 	}
 
 table.dkp tr th {
-/*	background: #4B94FF;*/
-  border-radius: 5px 5px 0 0;
+/*	background: #4B94FF;
+  border-radius: 5px 5px 0 0;*/
 	background-image: url(<?=$directory?>images/sbmt.png);
 	color: #fff;
 	padding: 5px 15px;
@@ -789,3 +789,9 @@ table.stripped tr.odd td{
 	background-position:bottom left;
 	margin-right:25px; /* interior-padding right */
 	padding:2px 0 15px 15px} /* mirror .cssbox_head right/left */
+
+
+.armory_link,.wiki_link{
+  margin-right: 5px;
+  font-size: 1px;
+}

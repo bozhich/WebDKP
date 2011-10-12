@@ -43,8 +43,8 @@ class wowstats {
 	============================================================*/
 	//the url where item xml data can be downloaded from for items.
 	//{ITEM_NAME} will be replaced with a url encoded name
-	const itemUrl = "http://www.wowhead.com/item={ITEM_NAME}&xml";
-		
+      const itemUrl = "http://www.wowhead.com/item={ITEM_NAME}&xml";
+
 	/*===========================================================
 
 	============================================================*/
@@ -95,7 +95,7 @@ class wowstats {
 		//get the url that we will download from
 		$url = wowstats::itemUrl;
 		$url = str_replace("{ITEM_NAME}", urlencode($name), $url);
-var_dump($url);
+
 		//get and parser the data
         $doc = new item_data();
         $doc = $doc->get_xml($url);
@@ -107,8 +107,10 @@ var_dump($url);
 		$item->name = $doc->item->name;
 		$item->itemid = $doc->item['id'];
 		$item->quality = $doc->item->quality['id'];
-		$item->link = $doc->item->link;
-		$item->icon = $doc->item->icon;
+		//$item->link = $doc->item->link;
+        /* lukas */
+        $item->link =  preg_replace('(http:\/\/www.wowhead.com\/item=(\d+))' , 'http://www.openwow.com/?item=\1',$doc->item->link) ;
+    	$item->icon = $doc->item->icon;
 
 		if($item->itemid == "") {
 			$item->name = $name;

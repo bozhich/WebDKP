@@ -11,7 +11,7 @@ class SimpleEntry {
 	var $player;
 	var $playerguild;
 	var $playerclass;
-	var $playerrank;
+//	var $playerrank;
 
 
 	function SimpleEntry($entry = ""){
@@ -22,7 +22,7 @@ class SimpleEntry {
 			$this->player = $entry->user->name;
 			$this->playerguild = $entry->user->guild->name;
 			$this->playerclass = $entry->user->class;
-			$this->playerrank = $entry->user->rank;
+//			$this->playerrank = $entry->user->rank;
 		}
 	}
 }
@@ -43,7 +43,7 @@ class pageDkp extends pageDkpMain {
 		$filters = $this->CombineDKPFilters("main");
 
 		$this->LoadPageVars("main");
-		$fulldata = dkpUtil::GetDKPTable($this->guild->id, $this->tableid, $count, $this->sort, $this->order, $this->page, $this->maxpage, $filters );
+	 	$fulldata = dkpUtil::GetDKPTable($this->guild->id, $this->tableid, $count, $this->sort, $this->order, $this->page, $this->maxpage, $filters );
 
 		$data = array();
 		$useTiers = $this->settings->GetTiersEnabled();

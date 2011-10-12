@@ -22,7 +22,7 @@ class dkpUser {
 	var $faction;		//the name of the faction (alliance / horde)
 	var $server;		//the name of the server
 	var $class;			//the class of the user
-	var $rank;			//the rank of the user
+//	var $rank;			//the rank of the user
 	var $main = 0;		//The id of a 'main account'. Only applies if this is
 						//an alt account (ie, an alternative character for
 						//another player in the dkp list)
@@ -69,13 +69,13 @@ class dkpUser {
 	{
 		$this->id=$row["id"];
 		if($row["userid"]!="")
-	  		$this->id = $row["userid"];
+	  $this->id = $row["userid"];
 		$this->name = $row["name"];
 		$this->faction = $row["faction"];
 		$this->server = $row["server"];
 		$this->class = $row["class"];
 		$this->main = $row["main"];
-		$this->rank = $row["rank"];
+//		$this->rank = $row["rank"];
 
 		if($row["gname"]!="") {
 			unset($guild);

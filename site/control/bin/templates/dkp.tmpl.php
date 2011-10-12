@@ -10,7 +10,7 @@ This table is empty. Upload a log file or manually add DKP from the control cent
 <tr class="header">
 	<th class="link center" style="width:50px" sorttype="class"><a>#</a></th>
 	<th class="link" sorttype="player"><a>name</a></th>
-	<th class="link center" style="width:150px" sorttype="rank"><a>rank</a></th>
+<!--	<th class="link center" style="width:150px" sorttype="rank"><a>rank</a></th>-->
 	<th class="link center" style="width:200px" sorttype="guild"><a>guild</a></th>
   <th class="link center" style="width:100px" sorttype="dkp"><a>dkp</a></th>
 	<?php if($settings->GetLifetimeEnabled()){ ?>
