@@ -8,20 +8,21 @@ html, body {
 body{
  	/*color:#404040;*/
   font-size: 10pt;
-	/*font-family: "Lucida Grande","Helvetica Neue",Verdana,Arial,sans-serif;*/
+	font-family: "Lucida Grande","Helvetica Neue",Verdana,Arial,sans-serif;
 	margin: 0px;
 	line-height: 1.6em;
- 	background-image: url(<?=$directory?>images/dragon.jpg);
+/* 	background-image: url(<?=$directory?>images/dragon.jpg);*/
   background-attachment: scroll;
   background-clip: border-box;
   background-color: #393939;
   background-origin: padding-box;
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  /*background-size: 100% auto;*/
   font: 13px "Trebuchet MS",Arial,sans-serif;
- /*	background: #000 url(<?=$directory?>images/bgtile.jpg);
-	background-position: 50% 3px;*/
+ 	background: #000 url(<?=$directory?>images/bgtile.jpg);
+	background-position: 50% 3px;
+  background-position: top;
 	}
 
 #container {
@@ -793,5 +794,4 @@ table.stripped tr.odd td{
 
 .armory_link,.wiki_link{
   margin-right: 5px;
-  font-size: 1px;
 }
