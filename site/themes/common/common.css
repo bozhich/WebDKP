@@ -26,7 +26,7 @@ May be overridden by extending themes.
 	padding: 4px;
 	padding-left: 25px;
 	margin: 4px 0px 4px 0px;
-	background: #FAE5AD url(<?=$directory?>/images/error.png) no-repeat 4px 9px;
+	background: url(<?=$directory?>/images/error.png) no-repeat 4px 9px;
 	}
 .message {
 	padding: 4px;

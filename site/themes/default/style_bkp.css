@@ -18,6 +18,7 @@ body{
   background-origin: padding-box;
   background-position: center top;
   background-repeat: no-repeat;
+  /*background-size: 100% auto;*/
   font: 13px "Trebuchet MS",Arial,sans-serif;
  	background: #000 url(<?=$directory?>images/bgtile.jpg);
 	background-position: 50% 3px;
@@ -25,18 +26,28 @@ body{
 	}
 
 #container {
-  background-color: rgba(0 , 0 , 0 , 0.4);
-  color: #CCCCCC;
+	/*background-color: #000;*/
 	margin: 2em auto;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 7px 7px;
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+	/*margin-top: 90px;*/
 	width: 1000px;
 	text-align: left;
-
+	/*padding-left: 17px;
+	padding-right: 17px;*/
+	_height: 100%; /*hack for ie 6 support*/
 	min-height: 100%;
-	}
+	/*background: #000 url(<?=$directory?>images/bgcenter.jpg);
+	background-position: -54px 90px;*/
 
+	/*padding-left: 54px;
+	padding-right: 54px;*/
+	}
 #innercontainer {
-}
+	/*padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 60px;*/
+	}
 
 #top {
 	background-color: #072540;
@@ -72,6 +83,8 @@ body{
 Layout: Header
 ========================*/
 #header {
+/*	border-left: 1px solid #7AB6FD;
+	border-right: 1px solid #4090D2;*/
 	height: 77px;
 	background: url(<?=$directory?>images/header/bg.jpg);
 	padding-left: 10px;
@@ -82,6 +95,9 @@ Layout: Header
 	color: #fff;
 	font-weight: bold;
 	height: 33px;
+	/*border-left: 1px solid #575757;
+	border-right: 1px solid #323232;*/
+	/*background: url(<?=$directory?>images/header/barbg.jpg);*/
   background: #181A19;
 
 	padding-left: 10px;
@@ -89,12 +105,13 @@ Layout: Header
 	margin-bottom: 20px;
 	}
 .barsep {
-	background: url(<?=$directory?>images/header/barsep.jpg) no-repeat;
+	/*background: url(<?=$directory?>images/header/barsep.jpg) no-repeat;
+
 	width: 2px;
 	padding-left: 0px;
 	padding-right: 0px;
 	background-position: 50% 0px;
-	height: 33px;
+	height: 33px;                                                        */
   float: left;
 	}
 .barlink {
@@ -106,11 +123,10 @@ Layout: Header
 	padding-left: 15px;
 	padding-right: 15px;
 	padding-top: 5px;
-  border-radius: 3px;
 	}
 .barlink:hover {
 	color: white;
-	background: #282828;
+	background: #636363;
 	cursor: pointer;
 	text-decoration: none;
 	}
@@ -120,13 +136,14 @@ Layout: Header
 	}
 
 .activetab {
-  background: #282828;
+  background: #575757;
   }
 
 #footer {
 	text-align: center;
 	font-size: 8pt;
 	font-family: Verdana;
+	/*margin-top: -30px;*/
 	padding-bottom: 30px;
 	padding-top: 15px;
 	clear: both;
@@ -191,6 +208,7 @@ Layout: Columns3
 .Columns3 #contents{
 	margin-left: 174px;
 	margin-right: 174px;
+	/*width: 464px;*/
 	}
 .Columns3 #rightbar{
 	float: right;
@@ -212,12 +230,15 @@ Border: 1 (Plain Title)
 .Border1 {
 	margin-bottom: 15px;
 	padding: 2px;
-}
+ /*	background: url(<?=$directory?>borders/images/bg1.png) top repeat-x; */
+
+	}
 .Border1 .BorderHeader {
 	height: 54px;
 	font-size: 25pt;
 	line-height: 100%;
 	color: #fff;
+	/*margin-top: 20px;*/
 	padding-top: 10px;
 	padding-left: 5px;
 	padding-right: 5px;
@@ -277,25 +298,26 @@ General
 ========================*/
 a {
 	text-decoration : none;
-  color : #FFD100;
+	/*color : #0084FF;*/
+  color : #666666;
   font-weight: bold;
 	}
 
 a:visited {
 	text-decoration : none;
-  color : #FFD100;
+  color : #666666;
   font-weight: bold;
 	}
 
 a:active {
 	text-decoration : none;
-  color : #FFD100;
+  color : #666666;
   font-weight: bold;
 	}
 
 a:hover {
 	text-decoration :underline;
-  color : #FFD100;
+  color : #666666;
   font-weight: bold;
 	}
 
@@ -335,6 +357,7 @@ ol, ul {
 	padding: 0;
 	margin: 0;
 	font-size: 10pt;
+	/*font-family: verdana;*/
 	}
 
 .dkptabs li {
@@ -371,7 +394,7 @@ ol, ul {
 	}
 
 .dkptabs li a:hover {
-	background: rgba(32,32,32.0.6);
+	background: #eee;
 	}
 
 .dkptabs .selected a {
@@ -401,31 +424,15 @@ table.dkp {
 	font-family: verdana;
 	margin: 0;
 	padding: 0;
-  background: none repeat scroll 0 0 	#202020;
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #484848;
-  border-right: 2px solid #484848;
-  border-style: solid;
-  border-width: 1px 2px 2px;
+	color : #000;
+  background: none repeat scroll 0 0 rgba(255, 255, 255, 0.6);
+  border-radius: 0 0 5px 5px;
 }
 
 table.dkp tr .center {
-  color:#CCCCCC;
 	text-align: center;
-  vertical-align: middle;
-}
 
-table.dkp tr .center img {
-  border: 0px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
+	}
 table.dkp tr .right {
 	text-align: right;
 	}
@@ -438,17 +445,16 @@ table.dkp tr .middle img{
 	}
 
 table.dkp tr th {
-	color: #282828;
+/*	background: #4B94FF;
+  border-radius: 5px 5px 0 0;*/
+	background-image: url(<?=$directory?>images/sbmt.png);
+	color: #fff;
 	padding: 5px 15px;
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #484848;
-  border-right: 2px solid #484848;
-  border-style: solid;
-  border-width: 1px 2px 2px;
+ /*	border-top: 1px solid #65A4FF;
+	border-left: 1px solid #65A4FF;
+	border-bottom: 1px solid #1F7AFF;
+	border-right: 1px solid #1F7AFF;*/
+	font-weight: bold;
 }
 
 table.dkp tr th.link{
@@ -459,7 +465,7 @@ table.dkp tr th a{
 	cursor: pointer;
 	text-decoration: none;
 	padding: 5px 15px;
-
+	color: #fff;
 	display: block;
 }
 table.dkp tr th a:hover {
@@ -467,19 +473,19 @@ table.dkp tr th a:hover {
 }
 
 table.dkp tr td {
-  -moz-border-bottom-colors: none;
-  -moz-border-image: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #484848;
-  border-right: 2px solid #484848;
-  border-style: solid;
-  border-width: 1px 2px 2px;
-}
+	/*background: #ECECEC;*/
+/*	background: #CCCCCC; */
+
+	border-bottom: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-left: 0px solid #000;
+	border-top: 0px solid #000;
+	padding: 5px 10px;
+
+	}
 
 table.dkp tr.over td, table.dkp td.over{
-	background: #282828;
+	background: #B6B6B6;
 }
 
 table.dkp tr.selected td, table.dkp td.selected{
@@ -570,20 +576,20 @@ table.stripped tr.odd td{
 	}
 
 .roundedcornr_box {
- /*	background: url(<?=$directory?>images/corners/tl.png) no-repeat top left;*/
+	background: url(<?=$directory?>images/corners/tl.png) no-repeat top left;
 }
 .roundedcornr_top {
-/*	background: url(<?=$directory?>images/corners/tr.png) no-repeat top right;
-*/}
+	background: url(<?=$directory?>images/corners/tr.png) no-repeat top right;
+}
 .roundedcornr_bottom {
-/*	background: url(<?=$directory?>images/corners/bl.png) no-repeat bottom left;
-*/}
+	background: url(<?=$directory?>images/corners/bl.png) no-repeat bottom left;
+}
 .roundedcornr_bottom div {
-/*	background: url(<?=$directory?>images/corners/br.png) no-repeat bottom right;
-*/}
+	background: url(<?=$directory?>images/corners/br.png) no-repeat bottom right;
+}
 .roundedcornr_content {
-/*	background: url(<?=$directory?>images/corners/r.png) top right repeat-y;
-*/}
+	background: url(<?=$directory?>images/corners/r.png) top right repeat-y;
+}
 
 .roundedcornr_top div,.roundedcornr_top,
 .roundedcornr_bottom div, .roundedcornr_bottom {
@@ -830,8 +836,6 @@ a.Warlock{
 a.Warrior{
   color:#C79C6E;
 }
-
-
 
 /*#C41E3B  - dk
 #FF7C0A  - dudu

@@ -983,7 +983,7 @@ var PointsTable = Class.create(ManualPageTable, {
     //build the row
     row.appendChild(Builder.node('td',{},
                       //build the normal DKP liml
-                      Builder.node('a',{href:DKP.BaseUrl+"Player/"+this.items[i].player,class:'dkp_link'},this.items[i].player),
+                      Builder.node('a',{href:DKP.BaseUrl+"Player/"+this.items[i].player,class:this.items[i].playerclass},this.items[i].player),
                       //build a <p> so the next values will be on a new row
                       Builder.node('h6',{},
                         Builder.node('a',{href:"http://armory.molten-wow.com/character-profile/"+this.items[i].player+"/Neltharion/",class:'armory_link'},'Armory'),
