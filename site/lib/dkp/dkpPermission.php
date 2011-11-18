@@ -109,7 +109,7 @@ class dkpPermission {
 						`id` INT NOT NULL AUTO_INCREMENT ,
 						`name` VARCHAR (64) NOT NULL,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 
 			//make sure our table has some default values
 			dkpPermission::addPermission("BackupCreate");

@@ -188,7 +188,7 @@ class themeMap {
 						`path` VARCHAR (256) NOT NULL,
 						`theme` INT NOT NULL,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

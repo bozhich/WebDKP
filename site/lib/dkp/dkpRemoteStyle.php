@@ -188,7 +188,7 @@ class dkpRemoteStyle {
 						`createdby` VARCHAR (32) NOT NULL,
 						`file` VARCHAR (64) NOT NULL,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

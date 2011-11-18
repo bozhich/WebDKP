@@ -144,7 +144,7 @@ class passwordReset {
 						`requestkey` VARCHAR (256) NOT NULL,
 						`request` DATETIME NOT NULL,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

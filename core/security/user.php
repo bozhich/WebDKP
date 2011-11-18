@@ -548,7 +548,7 @@ class user {
 						`guild` INT NOT NULL ,
 						`registerdate` DATETIME NOT NULL ,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

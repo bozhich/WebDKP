@@ -137,7 +137,7 @@ class dkpLootTableEntry {
 						`cost` INT NOT NULL,
 						PRIMARY KEY ( `id` ),
             KEY `section` (`loottable`,`section`,`name`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

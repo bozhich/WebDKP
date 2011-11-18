@@ -290,7 +290,7 @@ class dkpAward {
 						KEY `key_date` (`guild`,`tableid`,`date`),
             KEY `key_points` (`guild`,`tableid`,`points`),
             KEY `key_reason` (`guild`,`tableid`,`reason`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

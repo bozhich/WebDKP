@@ -132,7 +132,7 @@ class dkpLootTableSection {
 						`name` VARCHAR (256) NOT NULL,
 						PRIMARY KEY ( `id` ),
 						KEY `loottable` (`loottable`,`name`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

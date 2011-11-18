@@ -135,7 +135,7 @@ class dkpPointsHistoryTableEntry {
 						PRIMARY KEY ( `id` ),
             KEY `user` (`guild`,`user`,`award`),
             KEY `award` (`award`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

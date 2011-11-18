@@ -116,7 +116,7 @@ class convertProgress {
 						`name` VARCHAR (256) NOT NULL,
 						`progress` VARCHAR (256) NOT NULL,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

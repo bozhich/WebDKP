@@ -121,7 +121,7 @@ class dkpServer {
 						`name` VARCHAR (32) NOT NULL,
 						PRIMARY KEY ( `id` ),
             KEY `name` (`name`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

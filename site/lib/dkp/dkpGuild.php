@@ -250,7 +250,7 @@ class dkpGuild {
 						`claimed` INT(1) NOT NULL,
 						PRIMARY KEY ( `id` ),
             UNIQUE KEY `gname` (`gname`,`gserver`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

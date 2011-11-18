@@ -156,7 +156,7 @@ class siteStatus {
             `theme` INT NOT NULL,
             `setup` INT NOT NULL,
             PRIMARY KEY ( `id` )
-            ) TYPE = innodb;");
+            ) ENGINE = innodb;");
       //create the intial site status
       unset($status);
       $status = new siteStatus();

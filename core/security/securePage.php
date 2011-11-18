@@ -237,7 +237,7 @@ class securePage {
 						`pageid` INT NOT NULL,
 						`allowedGroups` VARCHAR (256),
 					PRIMARY KEY ( `id` )
-					) TYPE = innodb;");
+					) ENGINE = innodb;");
 		}
 	}
 }

@@ -399,7 +399,7 @@ class dkpUser {
             KEY `name` (`guild`,`server`,`name`),
             KEY `main` (`main`),
             KEY `guild` (`guild`,`server`,`class`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

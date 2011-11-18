@@ -307,7 +307,7 @@ class userGroup {
 						`visitor` TINYINT( 1 ) DEFAULT'0' NOT NULL ,
 						`system` TINYINT( 1 ) DEFAULT'0' NOT NULL ,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

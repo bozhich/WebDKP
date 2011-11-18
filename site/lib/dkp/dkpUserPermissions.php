@@ -414,7 +414,7 @@ class dkpUserPermissions {
 						`isadmin` INT NOT NULL,
 						PRIMARY KEY ( `id` ),
             KEY `name` (`user`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

@@ -152,7 +152,7 @@ class dkpCustomRemoteStyle {
 						`guild` INT NOT NULL,
 						`content` TEXT,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

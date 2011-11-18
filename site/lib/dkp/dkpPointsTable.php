@@ -353,7 +353,7 @@ class dkpPointsTable {
 						`name` VARCHAR (64) NOT NULL,
 						PRIMARY KEY ( `id` ),
             KEY `name` (`guild`,`tableid`,`name`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

@@ -292,7 +292,7 @@ class theme {
             `createdby` VARCHAR (256) NOT NULL,
             `dateadded` VARCHAR (256) NOT NULL,
             PRIMARY KEY ( `id` )
-            ) TYPE = innodb;");
+            ) ENGINE = innodb;");
 
       unset($defaultTheme);
       $defaultTheme = new theme();

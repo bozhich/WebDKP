@@ -128,7 +128,7 @@ class dkpSetting {
 						`value` VARCHAR (128) NOT NULL,
 						PRIMARY KEY ( `id` ),
             KEY `name` (`guild`,`name`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

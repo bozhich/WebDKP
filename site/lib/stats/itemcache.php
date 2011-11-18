@@ -150,7 +150,7 @@ class itemcache {
 						PRIMARY KEY ( `id` ),
             KEY `itemid` (`itemid`),
             KEY `name` (`name`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

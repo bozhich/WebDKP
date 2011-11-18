@@ -162,7 +162,7 @@ class dkpPointsHistoryTableEntry {
 						`date` DATETIME NOT NULL,
 						`foritem` INT (1) NOT NULL,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

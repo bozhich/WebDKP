@@ -194,7 +194,7 @@ class dkpPointsTableEntry {
             KEY `user` (`guild`,`tableid`,`user`),
             KEY `points` (`guild`,`tableid`,`points`),
             KEY `lifetime` (`guild`,`tableid`,`lifetime`)
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 		}
 	}
 }

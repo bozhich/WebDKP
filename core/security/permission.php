@@ -153,7 +153,7 @@ class permission {
 						`name` VARCHAR( 256 ) NOT NULL ,
 						`category` VARCHAR ( 256 ) NOT NULL ,
 						PRIMARY KEY ( `id` )
-						) TYPE = innodb;");
+						) ENGINE = innodb;");
 
 			//setup the baisc permissions
 			//unset($permission);
